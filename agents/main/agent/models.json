@@ -1,0 +1,31 @@
+{
+  "providers": {
+    "github-copilot": {
+      "baseUrl": "https://api.individual.githubcopilot.com",
+      "models": []
+    },
+    "github-models": {
+      "baseUrl": "https://models.github.ai/inference",
+      "apiKey": "",
+      "api": "openai-completions",
+      "models": [
+        {
+          "id": "deepseek/deepseek-V3-0324",
+          "name": "DeepSeek V3",
+          "reasoning": false,
+          "input": [
+            "text"
+          ],
+          "cost": {
+            "input": 0,
+            "output": 0
+          },
+          "context": 64000,
+          "capabilities": [
+            "text"
+          ]
+        }
+      ]
+    }
+  }
+}

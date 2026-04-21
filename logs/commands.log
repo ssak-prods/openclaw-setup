@@ -1,0 +1,12 @@
+{"timestamp":"2026-03-23T16:22:34.902Z","action":"reset","sessionKey":"agent:main:telegram:direct:5041465849","senderId":"5041465849","source":"telegram"}
+{"timestamp":"2026-03-24T20:57:48.136Z","action":"new","sessionKey":"agent:main:telegram:direct:5041465849","senderId":"5041465849","source":"telegram"}
+{"timestamp":"2026-03-25T16:39:29.378Z","action":"reset","sessionKey":"agent:main:tui-6e0a1c24-6e8c-4807-b1b2-65d077d2834a","senderId":"unknown","source":"gateway:sessions.reset"}
+{"timestamp":"2026-03-25T16:39:32.710Z","action":"reset","sessionKey":"agent:main:tui-6e0a1c24-6e8c-4807-b1b2-65d077d2834a","senderId":"unknown","source":"gateway:sessions.reset"}
+{"timestamp":"2026-03-25T16:39:35.110Z","action":"reset","sessionKey":"agent:main:tui-6e0a1c24-6e8c-4807-b1b2-65d077d2834a","senderId":"unknown","source":"gateway:sessions.reset"}
+{"timestamp":"2026-03-26T16:35:35.433Z","action":"reset","sessionKey":"agent:main:main","senderId":"unknown","source":"gateway:sessions.reset"}
+{"timestamp":"2026-03-26T16:35:39.936Z","action":"reset","sessionKey":"agent:main:main","senderId":"unknown","source":"gateway:sessions.reset"}
+{"timestamp":"2026-03-26T16:35:41.680Z","action":"reset","sessionKey":"agent:main:main","senderId":"unknown","source":"gateway:sessions.reset"}
+{"timestamp":"2026-03-26T18:29:45.212Z","action":"reset","sessionKey":"agent:main:main","senderId":"unknown","source":"gateway:sessions.reset"}
+{"timestamp":"2026-03-26T18:29:53.969Z","action":"reset","sessionKey":"agent:main:main","senderId":"unknown","source":"gateway:sessions.reset"}
+{"timestamp":"2026-04-01T20:24:26.886Z","action":"new","sessionKey":"agent:main:telegram:direct:5041465849","senderId":"5041465849","source":"telegram"}
+{"timestamp":"2026-04-02T14:17:25.318Z","action":"reset","sessionKey":"agent:main:telegram:direct:5041465849","senderId":"5041465849","source":"telegram"}

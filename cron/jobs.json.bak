@@ -1,0 +1,29 @@
+{
+  "version": 1,
+  "jobs": [
+    {
+      "id": "8a6c788c-a2c0-44bd-96df-7360684461b0",
+      "agentId": "main",
+      "sessionKey": "agent:main:main",
+      "name": "Soulclaw Telegram test reminder",
+      "enabled": true,
+      "deleteAfterRun": true,
+      "createdAtMs": 1774204683819,
+      "updatedAtMs": 1774204683819,
+      "schedule": {
+        "kind": "at",
+        "at": "2026-03-22T18:39:00.000Z"
+      },
+      "sessionTarget": "main",
+      "wakeMode": "now",
+      "payload": {
+        "kind": "systemEvent",
+        "text": "Reminder: this is your 2-minute Telegram test from Soulclaw. If you're seeing this in Telegram, pairing and delivery are working."
+      },
+      "state": {
+        "nextRunAtMs": 1774204740000,
+        "runningAtMs": 1774204740003
+      }
+    }
+  ]
+}

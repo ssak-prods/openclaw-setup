@@ -1,0 +1,9 @@
+{
+  "version": 1,
+  "socket": {
+    "path": "/home/abbu-rpi5/.openclaw/exec-approvals.sock",
+    "token": "w-cPYG0WqcF8hnqxYM6EnTjE9Gb3vbyf"
+  },
+  "defaults": {},
+  "agents": {}
+}

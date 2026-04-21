@@ -1,0 +1,224 @@
+{
+  "meta": {
+    "lastTouchedVersion": "2026.3.13",
+    "lastTouchedAt": "2026-03-26T18:28:52.794Z"
+  },
+  "wizard": {
+    "lastRunAt": "2026-03-25T13:39:35.590Z",
+    "lastRunVersion": "2026.3.13",
+    "lastRunCommand": "onboard",
+    "lastRunMode": "local"
+  },
+  "auth": {
+    "profiles": {
+      "openai-codex:default": {
+        "provider": "openai-codex",
+        "mode": "oauth"
+      },
+      "github-copilot:github": {
+        "provider": "github-copilot",
+        "mode": "token"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "github-models": {
+        "baseUrl": "https://models.github.ai/inference",
+        "apiKey": "${GITHUB_TOKEN}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "deepseek/deepseek-V3-0324",
+            "name": "DeepSeek V3"
+          },
+          {
+            "id": "meta/llama-4-scout",
+            "name": "Llama 4 Scout"
+          },
+          {
+            "id": "openai/gpt-4.1",
+            "name": "GPT-4.1"
+          },
+          {
+            "id": "openai/gpt-5-mini",
+            "name": "GPT-5 Mini"
+          },
+          {
+            "id": "openai/gpt-5-nano",
+            "name": "GPT-5 Nano"
+          },
+          {
+            "id": "openai/o4-mini",
+            "name": "o4-mini"
+          }
+        ]
+      },
+      "google-ai-studio": {
+        "baseUrl": "https://generativelanguage.googleapis.com/v1beta/openai",
+        "apiKey": "${GEMINI_API_KEY}",
+        "api": "openai-completions",
+        "models": [
+          {
+            "id": "gemini-2.5-pro",
+            "name": "Gemini 2.5 Pro"
+          },
+          {
+            "id": "gemini-3.1-pro-preview",
+            "name": "Gemini 3.1 Pro Preview"
+          },
+          {
+            "id": "gemini-2.0-flash",
+            "name": "Gemini 2.0 Flash"
+          }
+        ]
+      }
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.4"
+      },
+      "models": {
+        "openai-codex/gpt-5.4": {},
+        "github-models/deepseek/deepseek-V3-0324": {},
+        "github-models/meta/llama-4-scout": {},
+        "github-models/openai/gpt-4.1": {},
+        "github-models/openai/gpt-5-mini": {},
+        "github-models/openai/gpt-5-nano": {},
+        "github-models/openai/o4-mini": {},
+        "google-ai-studio/gemini-2.5-pro": {},
+        "google-ai-studio/gemini-3.1-pro-preview": {},
+        "google-ai-studio/gemini-2.0-flash": {}
+      },
+      "workspace": "/home/abbu-rpi5/.openclaw/workspace",
+      "compaction": {
+        "reserveTokensFloor": 20000
+      }
+    },
+    "list": [
+      {
+        "id": "main",
+        "default": true,
+        "name": "Main Brain",
+        "model": {
+          "primary": "openai-codex/gpt-5.4"
+        }
+      }
+    ]
+  },
+  "tools": {
+    "profile": "coding",
+    "web": {
+      "search": {
+        "enabled": true,
+        "provider": "gemini"
+      }
+    },
+    "media": {
+      "audio": {
+        "enabled": true,
+        "maxBytes": 20971520,
+        "echoTranscript": false
+      }
+    }
+  },
+  "messages": {
+    "tts": {
+      "auto": "inbound",
+      "mode": "final",
+      "provider": "edge",
+      "edge": {
+        "enabled": true,
+        "voice": "en-US-GuyNeural",
+        "lang": "en-US",
+        "outputFormat": "audio-24khz-48kbitrate-mono-mp3"
+      },
+      "maxTextLength": 2500,
+      "timeoutMs": 30000
+    }
+  },
+  "commands": {
+    "native": "auto",
+    "nativeSkills": "auto",
+    "restart": true,
+    "ownerDisplay": "raw"
+  },
+  "session": {
+    "dmScope": "per-channel-peer"
+  },
+  "hooks": {
+    "internal": {
+      "enabled": true,
+      "entries": {
+        "session-memory": {
+          "enabled": true
+        },
+        "command-logger": {
+          "enabled": true
+        },
+        "boot-md": {
+          "enabled": true
+        }
+      }
+    }
+  },
+  "channels": {
+    "telegram": {
+      "enabled": true,
+      "dmPolicy": "pairing",
+      "botToken": "8644566973:AAGw1IlsgwJTiOyyvjYVGuRxuQVMBUQxbcc",
+      "groupPolicy": "allowlist",
+      "streaming": "off"
+    }
+  },
+  "gateway": {
+    "port": 18789,
+    "mode": "local",
+    "bind": "loopback",
+    "auth": {
+      "mode": "token",
+      "token": "a21ee5c9e7bec8d8deeaeb24e4b071bec1f0c39e55ee79e7"
+    },
+    "tailscale": {
+      "mode": "off",
+      "resetOnExit": false
+    },
+    "nodes": {
+      "denyCommands": [
+        "camera.snap",
+        "camera.clip",
+        "screen.record",
+        "contacts.add",
+        "calendar.add",
+        "reminders.add",
+        "sms.send"
+      ]
+    }
+  },
+  "browser": {
+    "enabled": true,
+    "defaultProfile": "private",
+    "executablePath": "/usr/bin/chromium",
+    "profiles": {
+      "private": {
+        "cdpPort": 18801,
+        "color": "#7B61FF"
+      }
+    }
+  },
+  "skills": {
+    "install": {
+      "nodeManager": "npm"
+    }
+  },
+  "plugins": {
+    "entries": {
+      "telegram": {
+        "enabled": true
+      }
+    }
+  }
+}

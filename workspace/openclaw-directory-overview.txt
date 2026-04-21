@@ -1,0 +1,64 @@
+OPENCLAW DIRECTORY OVERVIEW
+================================================================================
+Root: /home/abbu-rpi5/.openclaw
+Generated: 2026-04-01T20:35:12
+
+High-level reading:
+- browser/ is by far the noisiest subtree because it contains Chromium user-data and cache files.
+- workspace/ is the human-facing area where assistant notes, docs, and project files live.
+- agents/ holds session history and agent runtime data.
+- media/ holds attached files like the voice notes you send.
+- cron/, delivery-queue/, and telegram/ are the automation/messaging plumbing.
+
+Top-level map:
+
+- agents/  (3 dirs, 21 files)
+  agent runtime state, auth/model profiles, and saved session logs
+- browser/  (63 dirs, 486 files)
+  embedded browser profile and cache/storage used by browser automation
+- canvas/  (0 dirs, 1 files)
+  canvas-related runtime data
+- completions/  (0 dirs, 4 files)
+  completion/request artifacts
+- credentials/  (0 dirs, 3 files)
+  stored credentials/config secrets area
+- cron/  (1 dirs, 4 files)
+  scheduled automation definitions/state
+- delivery-queue/  (1 dirs, 0 files)
+  queued outbound delivery work
+- devices/  (0 dirs, 2 files)
+  paired device records
+- identity/  (0 dirs, 2 files)
+  instance/account identity metadata
+- logs/  (0 dirs, 2 files)
+  runtime logs
+- media/  (2 dirs, 27 files)
+  inbound/outbound media files
+- memory/  (0 dirs, 1 files)
+  memory store outside the workspace
+- telegram/  (0 dirs, 2 files)
+  telegram channel/provider state
+- workspace/  (34 dirs, 63 files)
+  your editable home: docs, skills, memory notes, persona files, etc.
+- exec-approvals.json  (file)
+  records command approval decisions
+- openclaw.json  (file)
+  main config and its backups
+- openclaw.json.bak  (file)
+  main config and its backups
+- openclaw.json.bak-2026-03-27-0113  (file)
+  main config and its backups
+- openclaw.json.bak.1  (file)
+  main config and its backups
+- openclaw.json.bak.2  (file)
+  main config and its backups
+- openclaw.json.bak.3  (file)
+  main config and its backups
+- openclaw.json.bak.4  (file)
+  main config and its backups
+- update-check.json  (file)
+  updater/version check metadata
+
+Files generated alongside this overview:
+- openclaw-directory-map.txt  -> full recursive tree of every discovered folder/file
+- openclaw-directory-map.html -> HTML version of the same tree
